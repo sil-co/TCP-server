@@ -1,15 +1,21 @@
+import { Client } from "./client";
+import { Server } from "./server";
 
 class Main {
 
-    constructor() {
+    constructor() { }
 
+    startServer() {
+        const server = new Server();
+        server.runServer();
     }
 
-    start() {
-
+    startClient() {
+        const client = new Client();
+        client.runClient();
     }
 }
 
 const main = new Main();
-main.start();
-
+main.startServer();
+main.startClient();
